@@ -28,6 +28,33 @@ class derivative:
 derivative('2x^2+6x+9').poly()
 
 
+import re
+
+class derivative:
+    def __init__(self, inputs):
+        self.inputs = inputs
+    def poly(self):
+        new_func = [x for x in re.split(r'[()]', self.inputs) if x != '']
+        signs = [a for a in self.inputs if a == '-' or a == '+']
+        
+        
+
+        print(new_func)
+        print(signs)
+derivative('(2x^-2)+(6x^4)+(9)').poly()
+
+
+
+
+
+
+'''
+Sources:
+https://docs.python.org/3/library/re.html
+https://www.geeksforgeeks.org/python-split-multiple-characters-from-string/
+
+'''
+
 
 
 
